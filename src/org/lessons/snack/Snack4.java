@@ -9,12 +9,12 @@ public class Snack4 {
         System.out.println("Inserisci una parola: ");
         String word = scanner.nextLine();
 
-        boolean check = false;
+        boolean check = true;
 
 
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) == word.charAt(word.length() - 1 - i)) {
-                check = true;
+        for (int i = 0; i < word.length() / 2; i++) {
+            if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
+                check = false;
                 break;
             }
         }
